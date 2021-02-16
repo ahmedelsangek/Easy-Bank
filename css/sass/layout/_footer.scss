@@ -1,0 +1,117 @@
+.footer {
+  position: relative;
+  background-color: $darkBlue;
+  .info {
+    @media #{$maxMobile} {
+      display: block;
+      text-align: center;
+    }
+    @media #{$minSmall} {
+      display: flex;
+      text-align: left;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    padding: {
+      top: 50px;
+      bottom: 42px;
+    }
+    .icon {
+      display: flex;
+      justify-content: flex-start;
+      @media #{$maxMobile} {
+        justify-content: center;
+      }
+      @media #{$minSmall} {
+        justify-content: flex-start;
+      }
+      img {
+        position: absolute;
+      }
+      h2 {
+        color: $white;
+        font-weight: bold;
+        font-size: 20px;
+        margin: -4px 0 0 32px;
+        z-index: 2;
+      }
+    }
+    .logo {
+      display: flex;
+      padding: 0;
+      @media #{$maxMobile} {
+        justify-content: center;
+        margin: 20px 0 0 0;
+      }
+      @media #{$minSmall} {
+        justify-content: flex-start;
+        margin: 20px 0 0 0;
+      }
+      li {
+        margin: 0 10px;
+        height: 20px;
+        &:first-of-type {
+          @media #{$maxMobile} {
+            margin: 0 10px;
+          }
+          @media #{$minSmall} {
+            margin-left: 0;
+          }
+        }
+        i {
+          color: $lightGrayishBlue;
+          &:hover {
+            color: #33c586;
+            @include prefixer(transition, all 0.4s ease, webkit moz o ms);
+          }
+        }
+      }
+    }
+    ul {
+      padding: 0;
+      @media #{$maxMobile} {
+        margin-top: 8px;
+      }
+      @media #{$minSmall} {
+        margin-top: 8px;
+      }
+      @media #{$minLarge} {
+        margin: 8px 0 0 -150px;
+      }
+      li {
+        color: $lightGrayishBlue;
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+        cursor: pointer;
+        &:hover {
+          color: #33c586;
+          @include prefixer(transition, all 0.4s ease, webkit moz o ms);
+        }
+      }
+    }
+    div {
+      &:last-of-type {
+        // text-align: right;
+        @media #{$maxMobile} {
+          text-align: center;
+        }
+        @media #{$minSmall} {
+          text-align: right;
+        }
+        button {
+          margin-right: 0;
+          @media #{$maxMobile} {
+            margin-top: 12px;
+          }
+          @media #{$minSmall} {
+            margin-top: 0;
+          }
+        }
+        p {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

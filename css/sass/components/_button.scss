@@ -1,0 +1,16 @@
+.button {
+  width: 165px;
+  height: 45px;
+  background-image: linear-gradient(to right, $limGreen, $brightCyan);
+  color: $white;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  &:hover {
+    opacity: 0.7;
+    @include prefixer(transition, all 0.4s ease, webkit moz o ms);
+  }
+}

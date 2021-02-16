@@ -1,0 +1,54 @@
+@import "./sass/helpers/variables";
+@import "./sass/helpers/mixins";
+@import "./sass/components/button";
+
+@import "./sass/layout/header";
+@import "./sass/layout/services";
+@import "./sass/layout/aboutus";
+@import "./sass/layout/footer";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: $fontSize;
+  color: $grayishBlue;
+  overflow-x: hidden;
+  background-color: $veryLightGray;
+}
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right, $limGreen, $brightCyan);
+}
+.container {
+  margin: auto;
+  @media #{$maxMobile} {
+    width: 345px;
+  }
+  @media #{$minSmall} {
+    width: 750px;
+  }
+  @media #{$minMedium} {
+    width: 970px;
+  }
+  @media #{$minLarge} {
+    width: 1170px;
+  }
+}
+h1,
+h2,
+h3 {
+  color: $darkBlue;
+  font-weight: 500;
+}
+p {
+  line-height: 1.6;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
